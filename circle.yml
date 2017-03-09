@@ -11,7 +11,7 @@ checkout:
     - pip install virtualenv
     - virtualenv venv
     - mkdir mesos_metrics
-    - cp -r Mesos logfile test mesos_metrics/
+    - cp -r Mesos venv logfile test mesos_metrics/
     - tar zcf mesos_metrics.tar.gz mesos_metrics/
     - aws s3 cp mesos_metrics.tar.gz s3://circleci12/
 
