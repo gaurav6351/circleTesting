@@ -9,7 +9,7 @@ general:
 checkout:
   post:
     - pip install virtualenv
-    - make venv
+    -  virtualenv venv
     - mkdir mesos_metrics
     - cp -r logfile test mesos_metrics/
     - tar zcf mesos_metrics.tar.gz mesos_metrics/
