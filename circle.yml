@@ -1,0 +1,19 @@
+machine:
+  python:
+    version: 2.7.6
+
+general:
+  artifacts:
+    - "mesos_metrics.tar.gz"
+
+checkout:
+  post:
+    - pip install virtualenv
+    - make venv
+    - mkdir mesos_metrics
+    - cp -r logfile test mesos_metrics/
+    - tar zcf mesos_metrics.tar.gz mesos_metrics/
+
+test:
+  override:
+    - python --version
