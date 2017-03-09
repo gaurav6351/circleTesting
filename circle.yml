@@ -13,6 +13,7 @@ checkout:
     - mkdir mesos_metrics
     - cp -r logfile test mesos_metrics/
     - tar zcf mesos_metrics.tar.gz mesos_metrics/
+    - aws s3 cp mesos_metrics.tar.gz s3://circleci12/
 
 test:
   override:
